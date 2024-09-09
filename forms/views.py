@@ -1,13 +1,23 @@
-from django.shortcuts import render
+from django.db.models import F
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
+from django.views import generic
 
-# Create your views here.
-from django.http import HttpResponse
-
-def index(request):
-    response = "Você está respondendo ao formulário!"
-    return HttpResponse(response)
+from .models import Choice, Question
 
 
-def results(request):
-    response = "Aqui está o seu resultado!"
-    return HttpResponse(response)
+class IndexView(generic.ListView):
+    template_name = "./index.html"
+    def get_queryset(self):
+        return Question.objects.order_by()[:]
+
+class FormView(generic.ListView):
+    template_name = "./pages/formulario.html"
+    def get_queryset(self):
+        return Question.objects.order_by()[:]
+
+class DataView(generic.ListView):
+    template_name = "./pages/dashboard.html"
+    def get_queryset(self):
+        return Question.objects.order_by()[:]
