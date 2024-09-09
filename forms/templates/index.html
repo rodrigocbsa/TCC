@@ -29,14 +29,14 @@
             <div class="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
                 <h1 class="heading-black text-capitalize">Desenvolve Turismo</h1>
                 <p class="lead py-3">Desenvolve Turismo é uma plataforma de avaliação de destinos turísticos sustentáveis com base na MASA (Matriz Avaliativa de Sustentabilidade Acessível).</p>
-                <button class="btn btn-primary d-inline-flex flex-row align-items-center">
+                <a class="btn btn-primary d-inline-flex flex-row align-items-center" href="{% url 'forms:desenvolveturismo-dados' %}">
+                    <em class="ml-2" data-feather="arrow-left"></em>
                     Dados públicos
-                    <em class="ml-2" data-feather="arrow-right"></em>
-                </button>
-                <button class="btn btn-primary d-inline-flex flex-row align-items-center">
+                </a>
+                <a class="btn btn-primary d-inline-flex flex-row align-items-center" href="{% url 'forms:desenvolveturismo-pesquisa' %}">
                     Realizar minha avaliação
                     <em class="ml-2" data-feather="arrow-right"></em>
-                </button>
+                </a>
             </div>
         </div>
     </div>
