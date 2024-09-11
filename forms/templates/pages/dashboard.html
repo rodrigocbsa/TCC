@@ -13,8 +13,6 @@
 
     <!--vendors styles-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 
     <!-- Bootstrap CSS / Color Scheme -->
     {% load static %}
@@ -27,8 +25,12 @@
     <div class="container">
         <div class="row vh-md-100">
             <div class="my-auto text-left">
-                <h2 class="text-white heading-black">Dados disponíveis</h2>
-                <p class="text-light lead">Navegue pelos dados disponibilizados.</p>
+                <h2 class="text-white heading-black">Dados públicos</h2>
+                <p class="text-light lead">Confira os dados disponibilizados.</p>
+            </div>
+            <div class="text-center scroll-indicator">
+                <i class="fa fa-arrow-circle-down text-muted" aria-hidden="true"></i>
+                <p class="text-muted">Role para baixo</p>
             </div>
         </div>
     </div>
@@ -101,9 +103,9 @@
             <div class="col-md-8 mx-auto text-center">
                 <h2 class="text-white heading-black">Seu desenvolvimento começa aqui.</h2>
                 <p class="text-light lead">Avalie-se agora mesmo e tenha seu resultado em mãos.</p>
-                <button class="btn btn-primary">
+                <a class="btn btn-primary" href="{% url 'forms:desenvolveturismo-pesquisa' %}">
                     Quero me avaliar
-                </button>
+                </a>
             </div>
         </div>
     </div>

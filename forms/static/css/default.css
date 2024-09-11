@@ -9,6 +9,8 @@
 * Copyright 2011-2017 Twitter, Inc. 
 * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)*/
 :root {
+
+  /* opções de cores principais  */
   --blue: #2979ff;
   --indigo: #3d5afe;
   --purple: #d500f9;
@@ -22,10 +24,14 @@
   --white: #ffffff;
   --gray: #607D8B;
   --gray-dark: #455A64;
-  --primary: #1de9b6;
+
+
+
+
+  --primary: #1de9b6; /* muda cor principal aqui  */
   --secondary: #ffffff;
   --success: #00e676;
-  --info: #00e5ff;
+  --info: #00e5ff; /* e aqui  */
   --warning: #ffea00;
   --danger: #ff1744;
   --light: #ECEFF1;
@@ -65,7 +71,8 @@ body {
   line-height: 1.5;
   color: #CFD8DC;
   text-align: left;
-  background-color: #000000; }
+  background-color: #000000;
+  overflow-x: hidden; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -3298,7 +3305,7 @@ input[type="button"].btn-block {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  min-width: 0;
+  min-width: 10vw;
   word-wrap: break-word;
   background-color: #263238;
   background-clip: border-box;
@@ -4554,6 +4561,12 @@ button.close {
   padding-bottom: 20px;
   color: #ffffff;
   text-align: center; }
+
+  .scroll-indicator{
+    position: absolute;
+      bottom: 20px;
+      left: 50%;
+    transform: translateX(-50%); }
 
 .align-baseline {
   vertical-align: baseline !important; }
@@ -7760,6 +7773,7 @@ footer h5 {
       padding: 1rem; }
 
 /*all themes colors*/
+
 .bg-black {
   background-color: #000000; }
 
