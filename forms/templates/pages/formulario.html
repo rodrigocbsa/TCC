@@ -31,7 +31,7 @@
 <section class="m-6" id="formulario">
     <form>
         <!-- Seção CNPJ e Certificado CNAE -->
-        <div class="w-50 mb-6">
+        <div class="w-75 mb-6">
             <legend>Informações de validação</legend>
             <p class="text-muted"></p>
             <div class="input-group input-group-sm">
@@ -40,7 +40,8 @@
                 <input type="text" class="form-control" placeholder="CNAE" id="cnae">
                 <button type="button" class="btn btn-outline-secondary mt-1">Validar</button>
             </div>
-            <p class="text-muted" id="resultado">Localização (UF): </p>
+            <p class="text-muted" id="resultado">Localização (UF): - | Cidade: -</p>
+            <p class="text-muted" id="resultado">Avaliado: -</p>
         </div>
 
         <!-- Seção Pergunta com opções (editar: gerar automaticamente pelo framework!) -->
@@ -81,7 +82,7 @@
         <div class="mt-6">
             <div class="col-md-6 mx-auto text-center">
                 <h5 class="mb-4">Acesse o botão abaixo para gerar seu relatório e conferir seu resultado.</h5>
-                <a href="#" class="btn btn-primary">Conferir meu resultado</a>
+                <a href="{% url 'forms:desenvolveturismo-resultado' %}" class="btn btn-primary">Conferir meu resultado</a>
             </div>
         </div>
     </form>

@@ -38,4 +38,7 @@ $(function () {
           scrollTop: 0
       }, 1000);
   });
+
+  // download
+  document.getElementById('download').addEventListener('click',() => window.print());
 })

@@ -17,4 +17,7 @@ class FormView(generic.ListView):
 
 class DataView(TemplateView):
     template_name = "./pages/dashboard.html"
+
+class ResultView(TemplateView):
+    template_name = "./pages/resultados.html"
     

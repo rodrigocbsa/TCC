@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Resultado MASA | Desenvolve Turismo</title>
+    <meta name="description"
+          content="Desenvolve Turismo é uma plataforma de avaliação de destinos turísticos sustentáveis com base na MASA (Matriz Avaliativa de Sustentabilidade Acessível). Veja os dados da MASA."/>
+
+    <!--Inter UI font-->
+    <link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
+
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/default.css' %}" id="theme-color">
+</head>
+<body>
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb" class="m-6 d-print-none">
+    <ol class="breadcrumb bg-transparent">
+      <li class="breadcrumb-item"><a href="{% url 'forms:desenvolveturismo-home' %}"><i class="fa fa-arrow-left m-2"></i>Home</a></li>
+    </ol>
+  </nav>
+
+<!-- Relatório -->
+<section class="w-50 p-4 mx-auto bg-dark d-print-block">
+    <div class="container">
+
+        <!-- Cabeçalho relatório -->
+        <div class="text-center">
+            <div class="mb-6">
+                <h1 class="mt-2">RELATÓRIO</h1>
+                <i class="fa fa-download" id="download"></i>
+            </div>
+            <hr>
+            <p class="text-muted my-2">Aviso de isenção de responsabilidade</p>
+            <p class="text-muted">Este relatório foi elaborado com base em informações disponíveis até a data de sua publicação. Embora todos os esforços tenham sido feitos para garantir a precisão dos dados e das análises aqui contidos, não podemos garantir que todas as informações sejam completas ou isentas de erros. As opiniões expressas neste relatório são de responsabilidade dos autores e não refletem necessariamente a nossa opinião. Nós não nos responsabilizamos por quaisquer decisões tomadas com base nas informações fornecidas neste relatório. Recomenda-se que os leitores consultem profissionais qualificados antes de tomar qualquer decisão com base no conteúdo deste documento.</p>
+            <hr>
+        </div>
+
+        <!-- Dados do avaliado -->
+        <div class="table-responsive my-6">
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Avaliado</th>
+                    <th scope="col">UF</th>
+                    <th scope="col">Cidade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-active">
+                    <th scope="row">1</th>
+                    <td>Marks Pousada</td>
+                    <td>AM</td>
+                    <td>Manaus</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Corpo relatório -->
+        <div>
+            <div class="row">
+                <div class="col-md-4 mr-auto">
+                    <h3>Título</h3>
+                    <p class="lead">
+                        descrição
+                    </p>
+                </div>
+                <div class="col-md-7 offset-md-1">
+                    <ul class="features-list">
+                        <li>Gráfico</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-4 mr-auto">
+                    <h3>Título</h3>
+                    <p class="lead">
+                        descrição
+                    </p>
+                </div>
+                <div class="col-md-7 offset-md-1">
+                    <ul class="features-list">
+                        <li>Gráfico</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-4 mr-auto">
+                    <h3>Título</h3>
+                    <p class="lead">
+                        descrição
+                    </p>
+                </div>
+                <div class="col-md-7 offset-md-1">
+                    <ul class="features-list">
+                        <li>Gráfico</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-md-4 mr-auto">
+                    <h3>Título</h3>
+                    <p class="lead">
+                        descrição
+                    </p>
+                </div>
+                <div class="col-md-7 offset-md-1">
+                    <ul class="features-list">
+                        <li>Gráfico</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<section class="py-7 bg-dark section-angle top-right bottom-right d-print-none">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto text-center">
+                <h2 class="text-white heading-black">Contribua!</h2>
+                <p class="text-light lead">Envie sua pesquisa para a nossa base de dados e contribua para o desenvolvimento do turismo sustentável</p>
+                <p class="text-muted">Dados que não serão armazenados referem-se aos que permitem a identificação direta do prestador de serviço turístico (Nome, CNPJ, CNAE) e similares</p>
+                <button class="btn btn-primary">
+                    Contribuir
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+{% load static %}
+<script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
