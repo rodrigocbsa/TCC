@@ -19,5 +19,5 @@ class DataView(TemplateView):
     template_name = "./pages/dashboard.html"
 
 class ResultView(TemplateView):
-    template_name = "./pages/resultados.html"
+    template_name = "./pages/resultado.html"
     

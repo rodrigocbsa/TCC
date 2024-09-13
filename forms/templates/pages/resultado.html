@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="pt-br">
 <head>
@@ -13,19 +14,12 @@
 
     <!--vendors styles-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
 
-    <!-- Bootstrap CSS / Color Scheme -->
-    {% load static %}
+    <!-- css -->
     <link rel="stylesheet" href="{% static 'css/default.css' %}" id="theme-color">
 </head>
 <body>
-
-<!-- Breadcrumb -->
-<nav aria-label="breadcrumb" class="m-6 d-print-none">
-    <ol class="breadcrumb bg-transparent">
-      <li class="breadcrumb-item"><a href="{% url 'forms:desenvolveturismo-home' %}"><i class="fa fa-arrow-left m-2"></i>Home</a></li>
-    </ol>
-  </nav>
 
 <!-- Relatório -->
 <section class="w-50 p-4 mx-auto bg-dark d-print-block">
@@ -35,7 +29,7 @@
         <div class="text-center">
             <div class="mb-6">
                 <h1 class="mt-2">RELATÓRIO</h1>
-                <i class="fa fa-download" id="download"></i>
+                <i class="fa fa-print" id="download"></i>
             </div>
             <hr>
             <p class="text-muted my-2">Aviso de isenção de responsabilidade</p>
@@ -52,6 +46,7 @@
                     <th scope="col">Avaliado</th>
                     <th scope="col">UF</th>
                     <th scope="col">Cidade</th>
+                    <th scope="col">Data</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -60,6 +55,7 @@
                     <td>Marks Pousada</td>
                     <td>AM</td>
                     <td>Manaus</td>
+                    <td>12/09/2024</td>
                   </tr>
                 </tbody>
             </table>
@@ -127,16 +123,16 @@
     </div>
 </section>
 
-<section class="py-7 bg-dark section-angle top-right bottom-right d-print-none">
+<section class="m-2 py-7 bg-dark d-print-none">
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto text-center">
-                <h2 class="text-white heading-black">Contribua!</h2>
-                <p class="text-light lead">Envie sua pesquisa para a nossa base de dados e contribua para o desenvolvimento do turismo sustentável</p>
-                <p class="text-muted">Dados que não serão armazenados referem-se aos que permitem a identificação direta do prestador de serviço turístico (Nome, CNPJ, CNAE) e similares</p>
-                <button class="btn btn-primary">
-                    Contribuir
-                </button>
+                <h2 class="text-white heading-black">Obrigado!</h2>
+                <p class="text-light lead">Sua pesquisa acaba de contribuir para o desenvolvimento do turismo sustentável</p>
+                <p class="text-muted">Ao sair desta página, esse relatório será perdido. Salve-o clicando no botão de impressão ou utilizando CTRL+P no teclado.</p>
+                <a class="btn btn-primary" href="{% url 'forms:desenvolveturismo-home' %}">
+                    Finalizar
+                </a>
             </div>
         </div>
     </div>
@@ -146,8 +142,8 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
-{% load static %}
-<script src="{% static 'js/scripts.js' %}"></script>
+
+<!-- js -->
+<script src="{% static 'js/print.js' %}"></script>
 </body>
 </html>
