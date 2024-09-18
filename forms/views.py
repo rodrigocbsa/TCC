@@ -3,7 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 
-from .models import Choice, Question
+#from .models import Choice, Question
 
 
 class IndexView(TemplateView):
@@ -13,7 +13,7 @@ class IndexView(TemplateView):
 class FormView(generic.ListView):
     template_name = "./pages/formulario.html"
     def get_queryset(self):
-        return Question.objects.order_by()[:]
+        return 
 
 class DataView(TemplateView):
     template_name = "./pages/dashboard.html"

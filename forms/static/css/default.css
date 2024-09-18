@@ -1417,6 +1417,11 @@ pre {
   .table-responsive > .table-bordered {
     border: 0; }
 
+#formulario{
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -3303,6 +3308,7 @@ input[type="button"].btn-block {
   position: relative;
   display: -ms-flexbox;
   display: flex;
+  height: 30rem;
   -ms-flex-direction: column;
       flex-direction: column;
   min-width: 10vw;
@@ -4359,7 +4365,7 @@ button.close {
   margin-bottom: 0;
   font-size: 1rem;
   color: #ffffff;
-  background-color: #11171a;
+  background-color: var(--green);
   border-bottom: 2px solid #07090a;
   border-top-left-radius: calc(0.4rem - 2px);
   border-top-right-radius: calc(0.4rem - 2px); }
@@ -4368,7 +4374,7 @@ button.close {
 
 .popover-body {
   padding: 0.65rem 0.85rem;
-  color: #CFD8DC; }
+  color: var(--dark); }
 
 .carousel {
   position: relative; }
@@ -7628,6 +7634,47 @@ body {
       color: #1de9b6;
       margin: 0 .75rem 0 0; }
 
+/* Destaque para "Atitudinal" */
+.highlighted {
+  font-weight: bold;
+  border-left: 5px solid #248f24;
+  transition: all 0.3s ease-in-out;
+}
+.highlighted:hover {
+  border-left: 5px solid var(--green);
+}
+
+/* Tornar os cartões responsivos e permitir rolagem horizontal */
+.pricing-table {
+  white-space: nowrap;
+}
+
+.pricing-table .card {
+  display: inline-block;
+  min-width: 300px; /* Defina a largura mínima dos cartões */
+  max-width: 100%;
+  margin-right: 15px;
+}
+
+.pricing-table .card-deck {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 10px; /* Espaço extra para rolagem */
+}
+
+.pricing-table .card-deck::-webkit-scrollbar {
+  height: 8px;
+}
+
+.pricing-table .card-deck::-webkit-scrollbar-thumb {
+  background-color: #ced4da;
+  border-radius: 10px;
+}
+
+.pricing-table .card-deck::-webkit-scrollbar-thumb:hover {
+  background-color: #adb5bd;
+}
+
 /*Pricing tables*/
 .pricing-table .pricing-list {
   margin-bottom: 3rem;
@@ -7642,11 +7689,7 @@ body {
   text-align: center; }
   .pricing-table .card .card-body {
     padding: 2.25rem 2rem; }
-  .pricing-table .card.active {
-    color: white;
-    background-color: transparent; }
-    .pricing-table .card.active h2, .pricing-table .card.active h3 {
-      color: #ffffff; }
+
 
 /**slick slider */
 .slick-dots {

@@ -21,19 +21,30 @@
 </head>
 <body>
 
+    <section class="py-7 py-md-0 bg-hero d-print-none" id="home">
+        <div class="container">
+            <div class="row vh-md-100">
+                <div class="my-auto text-left">
+                    <h2 class="text-white heading-black">Seu resultado está pronto!</h2>
+                    <p class="text-light lead">Confira o seu desempenho.</p>
+                </div>
+                <div class="text-center scroll-indicator">
+                    <i class="fa fa-arrow-circle-down text-muted" aria-hidden="true"></i>
+                    <p class="text-muted">Role para baixo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <!-- Relatório -->
-<section class="w-50 p-4 mx-auto bg-dark d-print-block">
+<section class="w-50 mt-6 p-4 mx-auto bg-dark d-print-block">
     <div class="container">
 
-        <!-- Cabeçalho relatório -->
+        <!-- Disclaimer -->
         <div class="text-center">
-            <div class="mb-6">
-                <h1 class="mt-2">RELATÓRIO</h1>
-                <i class="fa fa-print" id="download"></i>
-            </div>
             <hr>
             <p class="text-muted my-2">Aviso de isenção de responsabilidade</p>
-            <p class="text-muted">Este relatório foi elaborado com base em informações disponíveis até a data de sua publicação. Embora todos os esforços tenham sido feitos para garantir a precisão dos dados e das análises aqui contidos, não podemos garantir que todas as informações sejam completas ou isentas de erros. As opiniões expressas neste relatório são de responsabilidade dos autores e não refletem necessariamente a nossa opinião. Nós não nos responsabilizamos por quaisquer decisões tomadas com base nas informações fornecidas neste relatório. Recomenda-se que os leitores consultem profissionais qualificados antes de tomar qualquer decisão com base no conteúdo deste documento.</p>
+            <p class="text-muted">Este relatório foi elaborado com base em informações disponíveis até a data de sua publicação. Embora todos os esforços tenham sido feitos para garantir a precisão dos dados e das análises aqui contidos, não podemos garantir que todas as informações sejam completas ou isentas de erros. As opiniões expressas neste relatório são de responsabilidade dos autores e não refletem necessariamente a nossa opinião. Nós não nos responsabilizamos por quaisquer decisões tomadas com base nas informações fornecidas neste relatório. O mesmo possui caráter meramente descritivo e não prescritivo. Recomenda-se que os leitores consultem profissionais qualificados antes de tomar qualquer decisão com base no conteúdo deste documento.</p>
             <hr>
         </div>
 
@@ -129,7 +140,7 @@
             <div class="col-md-8 mx-auto text-center">
                 <h2 class="text-white heading-black">Obrigado!</h2>
                 <p class="text-light lead">Sua pesquisa acaba de contribuir para o desenvolvimento do turismo sustentável</p>
-                <p class="text-muted">Ao sair desta página, esse relatório será perdido. Salve-o clicando no botão de impressão ou utilizando CTRL+P no teclado.</p>
+                <p class="text-muted">Ao sair desta página, este relatório será perdido. Salve-o clicando <a id="download">--> aqui <--</a> ou teclando CTRL+P.</p>
                 <a class="btn btn-primary" href="{% url 'forms:desenvolveturismo-home' %}">
                     Finalizar
                 </a>

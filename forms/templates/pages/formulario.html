@@ -21,6 +21,21 @@
 </head>
 <body>
 
+<section class="py-7 py-md-0 bg-hero" id="home"></section>
+    <div class="container">
+        <div class="row vh-md-100">
+            <div class="my-auto text-left">
+                <h2 class="text-white heading-black">Pesquisa</h2>
+                <p class="text-light lead">Acesse os ícones de pergunta para dúvidas.</p>
+            </div>
+            <div class="text-center scroll-indicator">
+                <i class="fa fa-arrow-circle-down text-muted" aria-hidden="true"></i>
+                <p class="text-muted">Role para baixo</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Breadcrumb -->
 <nav aria-label="breadcrumb" class="m-4">
   <ol class="breadcrumb bg-transparent">
@@ -84,9 +99,9 @@
 
 
 <!-- Formulário -->
-<section class="m-6" id="formulario">
+<section class="m-2" id="formulario">
     <form>
-        <!-- dimensão e pergunta e opções (gerar automaticamente pelo framework) -->
+        <!-- dimensão e pergunta e opções (gerar automaticamente com forloop) -->
         <nav aria-label="breadcrumb" class="d-inline-flex align-items-center">
 
             <i class="fa fa-question-circle-o me-2"></i>
@@ -100,28 +115,13 @@
             <p class="mb-0">6 min</p>
         </nav>
         
+        
         <div class="mt-4">
-            <label class="form-label">O céu é definitivamente azul.</label>
+            <label class="form-label pergunta">O céu é definitivamente azul.</label>
             <br>    
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="avaliacao" id="opcao1" value="1">
-                <label class="form-check-label" for="opcao1">Discordo totalmente</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="avaliacao" id="opcao2" value="2">
-                <label class="form-check-label" for="opcao2">Discordo</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="avaliacao" id="opcao3" value="3">
-                <label class="form-check-label" for="opcao3">Nem concordo nem discordo</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="avaliacao" id="opcao4" value="4">
-                <label class="form-check-label" for="opcao4">Concordo</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="avaliacao" id="opcao5" value="5">
-                <label class="form-check-label" for="opcao5">Concordo totalmente</label>
+                <label class="form-check-label alternativa" for="opcao1">Discordo totalmente</label>
             </div>
         </div>
         
@@ -149,6 +149,11 @@
         </div>
     </form>
 </section>
+
+<!--scroll to top-->
+<div class="scroll-top">
+    <i class="fa fa-angle-up" aria-hidden="true"></i>
+</div>
 
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
