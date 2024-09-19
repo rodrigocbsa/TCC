@@ -4,6 +4,7 @@ from .models import Pergunta,Opcoes
 class OpcoesInline(admin.TabularInline):
     model = Opcoes
     extra = 5
+    readonly_fields = ('votos',)
 
 class PerguntaAdmin(admin.ModelAdmin):
     inlines = [OpcoesInline]

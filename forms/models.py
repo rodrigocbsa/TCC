@@ -7,6 +7,6 @@ class Pergunta(models.Model):
         return self.titulo
 
 class Opcoes(models.Model):
-    pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE)
+    pergunta = models.ForeignKey(Pergunta, related_name='opcoes', on_delete=models.CASCADE) # related_name para acessar a referência nas tags
     opcao = models.CharField(max_length=30)
     votos = models.IntegerField(default=0)

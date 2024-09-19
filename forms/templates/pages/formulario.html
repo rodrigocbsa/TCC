@@ -44,11 +44,11 @@
   </ol>
 </nav>
 
-<!-- menu -->
+<!-- filtro 
 <section class="bg-dark p-4">
     <div class="container">
         <div class="row justify-content-center">
-            <!-- Visão -->
+            
             <div class="col-md-4">
                 <div class="d-flex">
                     <i class="fa fa-question-circle-o text-muted p-1"></i>
@@ -62,7 +62,7 @@
                 </select>
             </div>
 
-            <!-- Dimensão -->
+            
             <div class="col-md-4">
                 <div class="d-flex">
                     <i class="fa fa-question-circle-o text-muted p-1"></i>
@@ -78,7 +78,7 @@
                 </select>
             </div>
 
-            <!-- Subdimensão -->
+            
             <div class="col-md-4">
                 <div class="d-flex">
                     <i class="fa fa-question-circle-o text-muted p-1"></i>
@@ -90,40 +90,35 @@
         </div>
     </div>
 </section>
-<!-- barra de progresso -->
-<div class="sticky-sm-bottom">
-    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-        <div class="progress-bar" style="width: 10%"></div>
-    </div>
-</div>
-
+-->
 
 <!-- Formulário -->
+
 <section class="m-2" id="formulario">
     <form>
-        <!-- dimensão e pergunta e opções (gerar automaticamente com forloop) -->
         <nav aria-label="breadcrumb" class="d-inline-flex align-items-center">
-
             <i class="fa fa-question-circle-o me-2"></i>
             <ol class="breadcrumb bg-transparent mb-0 d-inline-flex me-2">
                 <li class="breadcrumb-item active" aria-current="page">Gestor</li>
                 <li class="breadcrumb-item active" aria-current="page">Acessibilidade</li>
                 <li class="breadcrumb-item active" aria-current="page">Atitudinal</li>
             </ol>
-            
             <i class="fa fa-clock-o pr-2"></i> 
             <p class="mb-0">6 min</p>
         </nav>
         
-        
+        {% for q in question_list %}
         <div class="mt-4">
-            <label class="form-label pergunta">O céu é definitivamente azul.</label>
-            <br>    
+            <label class="form-label pergunta">{{ q.titulo }}</label>
+            <br>  
+            {% for opc in q.opcoes.all %}          
             <div class="form-check form-check-inline">
                 <input class="form-check-input alternativa" type="radio" name="avaliacao" id="opcao1" value="1">
-                <label class="form-check-label alternativa-texto" for="opcao1">Discordo totalmente</label>
+                <label class="form-check-label alternativa-texto" for="opcao1">{{opc.opcao}}</label>
             </div>
+            {% endfor %}
         </div>
+        {% endfor %}
         
 
         <!-- Seção CNPJ e Certificado CNAE -->
