@@ -5,6 +5,13 @@ from django.views import generic
 
 from .models import Pergunta
 
+### Vendors ###
+
+
+class ResultView(TemplateView):
+    template_name = "./pages/resultado.html"
+
+
 
 class IndexView(TemplateView):
     template_name = "./index.html"
@@ -15,7 +22,3 @@ class FormView(generic.ListView):
     context_object_name = "question_list"
     def get_queryset(self):
         return Pergunta.objects.all()
-
-class ResultView(TemplateView):
-    template_name = "./pages/resultado.html"
-    
