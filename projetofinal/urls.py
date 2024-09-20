@@ -21,6 +21,5 @@ urlpatterns = [
     path('', include('forms.urls')),
     path('pesquisa/', include('forms.urls')),
     path('pesquisa/resultado/', include('forms.urls')),
-    path('django_plotly_dash/', include('django_plotly_dash.urls')),
     path('admin/', admin.site.urls),
 ]
