@@ -19,26 +19,10 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{% static 'css/default.css' %}" id="theme-color">
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
 </head>
 
 <body>
-
-    
-
-    <section class="py-7 py-md-0 bg-hero" id="home">
-        <div class="container">
-            <div class="row vh-md-100">
-                <div class="my-auto text-left">
-                    <h2 class="text-white heading-black">Pesquisa</h2>
-                    <p class="text-light lead">Acesse os ícones de pergunta para dúvidas.</p>
-                </div>
-                <div class="text-center scroll-indicator">
-                    <i class="fa fa-arrow-circle-down text-muted" aria-hidden="true"></i>
-                    <p class="text-muted">Role para baixo</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb" class="m-4">
@@ -47,6 +31,20 @@
             <li class="breadcrumb-item active" aria-current="page">Pesquisa</li>
         </ol>
     </nav>
+
+    <div id="container">
+        <h1 class="logo">Pesquisa</h1>
+        <div id="form-box">
+          <i id="prev-btn" class="fas fa-arrow-left"></i>
+          <i id="next-btn" class="fas fa-arrow-right"></i>
+          <div id="input-group">
+            <input id="input-field" required>
+            <label id="input-label"></label>
+            <div id="input-progress"></div>
+          </div>
+          <div id="progress-bar"></div>
+        </div>
+      </div>
 
     <!-- filtro 
 <section class="bg-dark p-4">
@@ -96,7 +94,7 @@
 </section>
 -->
 
-    <!-- Formulário -->
+    <!-- Formulário 
     <form>
         <section class="p-6 bg-dark" id="formulario">
 
@@ -124,8 +122,9 @@
             </div>
             {% endfor %}
         </section>
+        -->
 
-        <!-- Seção CNPJ e Certificado CNAE -->
+        <!-- Seção CNPJ e Certificado CNAE 
         <section class="py-7">
             <div class="container">
                 <div class="row">
@@ -143,7 +142,6 @@
                         <p class="text-muted" id="resultado">Avaliado: - | Estado (UF): - | Cidade: -</p>
 
                         <div class="mt-6 text-center">
-                            <!-- Botão de Envio -->
                             <p class="text-light lead">Acesse o botão abaixo para gerar seu relatório e conferir seu resultado.</p>
                             <a href="{% url 'forms:desenvolveturismo-resultado' %}" class="btn btn-primary">Conferir meu resultado</a>
                         </div>
@@ -152,11 +150,7 @@
             </div>
         </section>
     </form>
-
-    <!--scroll to top-->
-    <div class="scroll-top">
-        <i class="fa fa-angle-up" aria-hidden="true"></i>
-    </div>
+    -->
 
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -169,7 +163,7 @@
         crossorigin="anonymous"></script>
 
     <!-- js -->
-    <script src="{% static 'js/scroll.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/popover.js' %}"></script>
     <script src="{% static 'js/selects.js' %}"></script>
 </body>
