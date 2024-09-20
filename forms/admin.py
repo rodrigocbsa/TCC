@@ -9,6 +9,14 @@ class OpcoesInline(admin.TabularInline):
 class PerguntaAdmin(admin.ModelAdmin):
     inlines = [OpcoesInline]
 
+class SubdimensoesInline(admin.TabularInline):
+    model = Subdimensao
+    extra = 1
+
+class DimensaoAdmin(admin.ModelAdmin):
+    inlines = [SubdimensoesInline]
+
 # Registro no Django Admin
 admin.site.register(Pergunta,PerguntaAdmin)
-admin.site.register([Parametro,Indicador,Categoria,Dimensao,Subdimensao])
+admin.site.register(Dimensao,DimensaoAdmin)
+admin.site.register([Parametro,Indicador,Categoria,Subdimensao])
