@@ -1,0 +1,15 @@
+{
+  "name": "chartjs-example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel formulario.html",
+    "build": "parcel build formulario.html"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  },
+  "dependencies": {
+    "chart.js": "^4.0.0"
+  }
+}
