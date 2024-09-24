@@ -1,8 +1,3 @@
-const dimensaoSelect = document.getElementById('dimensao');
-const subdimensaoSelect = document.getElementById('subdimensao');
-
-subdimensaoSelect.innerHTML = '<option value="" disabled selected>-- Selecione uma subdimensão --</option>';
-
 const opcoesPorDimensao = {
     acessibilidade: [
         { value: '1', text: 'Atitudinal' },
@@ -34,6 +29,37 @@ const opcoesPorDimensao = {
     ]
 };
 
+
+
+
+const visaoSelect = document.getElementById('visao');
+const dimensaoSelect = document.getElementById('dimensao');
+const subdimensaoSelect = document.getElementById('subdimensao');
+const botao = document.getElementById('filtrar');
+
+subdimensaoSelect.innerHTML = '<option value="" disabled selected>-- Selecione uma subdimensão --</option>';
+botao.setAttribute('disabled', '');
+botao.innerHTML = "Esperando seleção...";
+
+visaoSelect.addEventListener('change', verify);
+subdimensaoSelect.addEventListener('change', verify);
+
+
+function verify() {
+    visao = visaoSelect.value;
+    dimensao = dimensaoSelect.value;
+    subdimensao = subdimensaoSelect.value;
+
+    if(visao != '' && dimensao != '' && subdimensao != ''){
+        botao.removeAttribute('disabled');
+        botao.innerHTML = "Tudo certo!";
+        return;
+    }
+
+    botao.setAttribute('disabled', '');
+    botao.innerHTML = "Esperando seleção...";
+}
+
 dimensaoSelect.addEventListener('change', function () {
     // Limpar
     subdimensaoSelect.innerHTML = '<option value="" disabled selected>-- Selecione uma subdimensão --</option>';
@@ -51,4 +77,8 @@ dimensaoSelect.addEventListener('change', function () {
             subdimensaoSelect.appendChild(optionElement);
         });
     }
+
+    verify();
 });
+
+

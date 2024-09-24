@@ -19,7 +19,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="{% static 'css/default.css' %}" id="theme-color">
-    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/survey.css' %}">
 </head>
 
 <body>
@@ -28,7 +28,8 @@
     <nav aria-label="breadcrumb" class="m-4">
         <ol class="breadcrumb bg-transparent">
             <li class="breadcrumb-item"><a href="{% url 'forms:desenvolveturismo-home' %}">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Pesquisa</li>
+            <li class="breadcrumb-item"><a href="{% url 'forms:desenvolveturismo-pesquisa' %}">Pesquisa</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Atual</li>
         </ol>
     </nav>
 
@@ -45,54 +46,6 @@
           <div id="progress-bar"></div>
         </div>
       </div>
-
-    <!-- filtro 
-<section class="bg-dark p-4">
-    <div class="container">
-        <div class="row justify-content-center">
-            
-            <div class="col-md-4">
-                <div class="d-flex">
-                    <i class="fa fa-question-circle-o text-muted p-1"></i>
-                    <h6 class="mb-0">Visão</h6>
-                </div>
-                <select class="form-select mt-1" aria-label="Floating label select example" id="visao">
-                    <option selected>-- Selecione uma visão --</option>
-                    <option value="1">Gestor</option>
-                    <option value="2">Residente Local</option>
-                    <option value="3">Visitante</option>
-                </select>
-            </div>
-
-            
-            <div class="col-md-4">
-                <div class="d-flex">
-                    <i class="fa fa-question-circle-o text-muted p-1"></i>
-                    <h6 class="mb-0">Dimensão</h6>
-                </div>
-                <select class="form-select mt-1" aria-label="Floating label select example" id="dimensao">
-                    <option selected>-- Selecione uma dimensão --</option>
-                    <option value="acessibilidade">Acessibilidade</option>
-                    <option value="governanca">Governança</option>
-                    <option value="ambiental">Ambiental</option>
-                    <option value="economico">Econômico</option>
-                    <option value="sociocultural">Sociocultural</option>
-                </select>
-            </div>
-
-            
-            <div class="col-md-4">
-                <div class="d-flex">
-                    <i class="fa fa-question-circle-o text-muted p-1"></i>
-                    <h6 class="mb-0">Subdimensão</h6>
-                </div>
-                <select class="form-select mt-1" aria-label="Floating label select example" id="subdimensao">
-                </select>
-            </div>
-        </div>
-    </div>
-</section>
--->
 
     <!-- Formulário 
     <form>
@@ -163,7 +116,7 @@
         crossorigin="anonymous"></script>
 
     <!-- js -->
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/survey.js' %}"></script>
     <script src="{% static 'js/popover.js' %}"></script>
     <script src="{% static 'js/selects.js' %}"></script>
 </body>
